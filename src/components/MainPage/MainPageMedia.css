@@ -2,7 +2,7 @@
     .container {
             margin: 0px auto;
             height: 100vh;
-            padding: 25px 30px 0px 30px;
+            padding: 150px 30px 0px 30px;
             border-radius: 0px;
         }
     
@@ -10,28 +10,28 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 30px;
         }
     
         input {
             outline: none;
             border: none;
-            width: 300px;
-            height: 28px;
-            border-radius: 20px;
+            width: 500px;
+            height: 60px;
+            border-radius: 10px;
             padding-left: 8px;
-            font-size: 13px;
-            font-weight: 400;
+            font-size: 28px;
+            font-weight: 600;
         }
     
         .searchIcon {
-            font-size: 20px;
+            font-size: 50px;
             color: azure;
             cursor: pointer;
         }
     
         .cityDetails {
-            margin-top: 70px;
+            margin-top: 250px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -44,19 +44,21 @@
         }
     
         .weatherIcon {
-            height: 70px;
+            height: 150px;
         }
     
         .temp {
-            font-size: 1rem;
+            font-size: 1.7rem;
             font-weight: 500;
         }
     
         .humidityAndSpeedLevel {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 150px;
+            justify-content: center;
             padding: 0px 20px;
-            margin-top: 70px;
+            margin-top: 150px;
         }
     
         .humidity,
@@ -64,18 +66,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 4px;
+            gap: 15px;
         }
     
         .humidityValue,
         .windSpeedValue {
-            font-size: 0.7rem;
+            font-size: 1.7rem;
             font-weight: 500;
         }
     
         .humidityText,
         .windSpeedText {
-            font-size: 0.5rem;
+            font-size: 1.5rem;
             font-weight: 400;
         }
     
@@ -83,13 +85,13 @@
         .windSpeedValueAndText {
             display: flex;
             flex-direction: column;
-            gap: 3px;
+            gap: 8px;
         }
     
         .humidityIcon,
         .windSpeedIcon {
-            font-size: 1.2rem;
-            font-weight: 500;
+            font-size: 2.3rem;
+            font-weight: 600;
         }
     
         .loadingText,
