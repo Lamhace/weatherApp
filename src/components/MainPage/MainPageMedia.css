@@ -1,0 +1,428 @@
+@media (min-width: 350px) {
+    .container {
+            margin: 0px auto;
+            height: 100vh;
+            padding: 25px 30px 0px 30px;
+            border-radius: 0px;
+        }
+    
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+    
+        input {
+            outline: none;
+            border: none;
+            width: 300px;
+            height: 28px;
+            border-radius: 20px;
+            padding-left: 8px;
+            font-size: 13px;
+            font-weight: 400;
+        }
+    
+        .searchIcon {
+            font-size: 20px;
+            color: azure;
+            cursor: pointer;
+        }
+    
+        .cityDetails {
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .cityText {
+            font-size: 2.3rem;
+            font-weight: 400;
+        }
+    
+        .weatherIcon {
+            height: 70px;
+        }
+    
+        .temp {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    
+        .humidityAndSpeedLevel {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 20px;
+            margin-top: 70px;
+        }
+    
+        .humidity,
+        .windSpeed {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+        }
+    
+        .humidityValue,
+        .windSpeedValue {
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+    
+        .humidityText,
+        .windSpeedText {
+            font-size: 0.5rem;
+            font-weight: 400;
+        }
+    
+        .humidityValueAndText,
+        .windSpeedValueAndText {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+    
+        .humidityIcon,
+        .windSpeedIcon {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    
+        .loadingText,
+        .errorText {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 0;
+        }
+}
+@media (min-width: 640px) {
+    .container {
+            background-color: #87CEEB;
+            margin: 0px auto;
+            margin-top: 30px;
+            width: 600px;
+            height: 90vh;
+            padding: 25px 30px 0px 30px;
+            border-radius: 10px;
+        }
+    
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+    
+        input {
+            outline: none;
+            border: none;
+            width: 350px;
+            height: 28px;
+            border-radius: 30px;
+            padding-left: 12px;
+            font-size: 15px;
+            font-weight: 400;
+        }
+    
+        .searchIcon {
+            font-size: 25px;
+            color: azure;
+            cursor: pointer;
+        }
+    
+        .cityDetails {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .cityText {
+            font-size: 2.5rem;
+            font-weight: 400;
+        }
+    
+        .weatherIcon {
+            height: 80px;
+        }
+    
+        .temp {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    
+        .humidityAndSpeedLevel {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 30px;
+            margin-top: 65px;
+        }
+    
+        .humidity,
+        .windSpeed {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+        }
+    
+        .humidityValue,
+        .windSpeedValue {
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+    
+        .humidityText,
+        .windSpeedText {
+            font-size: 0.5rem;
+            font-weight: 400;
+        }
+    
+        .humidityValueAndText,
+        .windSpeedValueAndText {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+    
+        .humidityIcon,
+        .windSpeedIcon {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+    
+        .loadingText,
+        .errorText {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 0;
+        }
+}
+
+@media (min-width: 768px) {
+.container {
+            background-color: #87CEEB;
+        margin: 0px auto;
+        margin-top: 30px;
+        width: 600px;
+        height: 90vh;
+        padding: 30px 40px 0px 40px;
+        border-radius: 10px;
+    }
+
+    .search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    input {
+        outline: none;
+        border: none;
+        width: 400px;
+        height: 30px;
+        border-radius: 30px;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .searchIcon {
+        font-size: 30px;
+        color: azure;
+        cursor: pointer;
+    }
+
+    .cityDetails {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cityText {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+
+    .weatherIcon {
+        height: 100px;
+    }
+
+    .temp {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .humidityAndSpeedLevel {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 30px;
+        margin-top: 65px;
+    }
+
+    .humidity,
+    .windSpeed {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .humidityValue,
+    .windSpeedValue {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .humidityText,
+    .windSpeedText {
+        font-size: 0.7rem;
+        font-weight: 400;
+    }
+
+    .humidityValueAndText,
+    .windSpeedValueAndText {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .humidityIcon,
+    .windSpeedIcon {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .loadingText,
+    .errorText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+                background-color: #87CEEB;
+            margin: 0px auto;
+            margin-top: 30px;
+            width: 800px;
+            height: 90vh;
+            padding: 30px 40px 0px 40px;
+            border-radius: 10px;
+        }
+    
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+    
+        }
+    
+        input {
+            outline: none;
+            border: none;
+            width: 500px;
+            height: 40px;
+            border-radius: 50px;
+            padding-left: 20px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    
+        .searchIcon {
+            font-size: 40px;
+            color: azure;
+            cursor: pointer;
+        }
+    
+        .cityDetails {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .cityText {
+            font-size: 4rem;
+            font-weight: 500;
+        }
+    
+        .weatherIcon {
+            height: 150px;
+        }
+    
+        .temp {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    
+        .humidityAndSpeedLevel {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 40px;
+            margin-top: 80px;
+        }
+    
+        .humidity,
+        .windSpeed {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+    
+        .humidityValue,
+        .windSpeedValue {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    
+        .humidityText,
+        .windSpeedText {
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+    
+        .humidityValueAndText,
+        .windSpeedValueAndText {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+    
+        .humidityIcon,
+        .windSpeedIcon {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    
+        .loadingText,
+        .errorText {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 0;
+        }
+}
+
+
+

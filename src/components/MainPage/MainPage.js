@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./MainPage.css";
+import './MainPageMedia.css'
 import { FiSearch } from "react-icons/fi";
 import axios from "axios";
 import clearSky from "../../Images/clearSky.png";
