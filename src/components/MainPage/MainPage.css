@@ -47,3 +47,39 @@ input{
     font-size: 2rem;
     font-weight: 700;
 }
+.humidityAndSpeedLevel{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+    margin-top: 80px;
+}
+.humidity, .windSpeed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.humidityValue, .windSpeedValue{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.humidityText, .windSpeedText{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.humidityValueAndText, .windSpeedValueAndText{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.humidityIcon, .windSpeedIcon{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.loadingText, .errorText{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        margin: 0;
+}

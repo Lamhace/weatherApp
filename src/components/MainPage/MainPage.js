@@ -13,6 +13,8 @@ import showerRain from "../../Images/showerRain.png";
 import thunderStormDay from "../../Images/thunderStormDay.png";
 import thunderStormNight from "../../Images/thunderStormNight.png";
 import brokenClouds from "../../Images/brokenClouds.png";
+import { GiWindsock } from "react-icons/gi";
+import { BsMoisture } from "react-icons/bs";
 
 export const API_KEY = "f50aeb2895fa2d5ac6d78dd22a57c171";
 //https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=Metric&appid=f50aeb2895fa2d5ac6d78dd22a57c171
@@ -21,6 +23,8 @@ function MainPage() {
   const [inputValue, setInputValue] = useState("");
   const [cityName, setCityName] = useState("London");
   const [cityWeather, setCityWeather] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const handleInputValueChange = (e) => {
     setInputValue(e.target.value);
   };
@@ -29,17 +33,27 @@ function MainPage() {
   };
   useEffect(() => {
     const fetchWeatherData = async () => {
+      setErrorMessage("");
+      setLoading(true);
       try {
         const response = await axios.get(
           `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=Metric&appid=${API_KEY}`
         );
         setCityWeather(response.data);
+        setErrorMessage("");
+        setLoading(false);
       } catch (error) {
         console.log("Error fetching:", error);
+        setLoading(false);
+        setErrorMessage("Failed to load data. Check browser connection and try again");
       }
     };
     fetchWeatherData();
   }, [cityName]);
+  console.log(
+    "CITY WEATHER SPEED:",
+    cityWeather.wind && cityWeather.wind.speed
+  );
   let weatherIcon;
   switch (cityWeather.weather && cityWeather.weather[0].icon) {
     case "01d":
@@ -100,8 +114,8 @@ function MainPage() {
     default:
       break;
   }
-
-   console.log(cityWeather);
+ 
+  console.log(cityWeather);
   return (
     <div className="container">
       <div className="search">
@@ -112,13 +126,42 @@ function MainPage() {
         />
         <FiSearch className="searchIcon" onClick={getCity} />
       </div>
-      <div className="cityDetails">
-        <div className="cityText">{cityWeather.name}</div>
-        <img src={weatherIcon} className="weatherIcon" />
-        <div className="temp">
-          {cityWeather.main && Math.floor(cityWeather.main.temp) + "°C"}
-        </div>
-      </div>
+      {loading ? (
+        <div className="loadingText">Loading...</div>
+      ) : errorMessage ? (
+        <div className="errorText">{errorMessage}</div>
+      ) : (
+        <>
+          <div className="cityDetails">
+            <img src={weatherIcon} alt="weatherIcon" className="weatherIcon" />
+            <div className="temp">
+              {cityWeather.main && Math.floor(cityWeather.main.temp) + "°C"}
+            </div>
+            <div className="cityText">{cityWeather.name}</div>
+          </div>
+          <div className="humidityAndSpeedLevel">
+            <div className="humidity">
+              <BsMoisture className="humidityIcon" />
+              <div className="humidityValueAndText">
+                <span className="humidityValue">
+                  {cityWeather.main && cityWeather.main.humidity + "g.m-3"}
+                </span>
+                <span className="humidityText">Humidity</span>
+              </div>{" "}
+            </div>
+            <div className="windSpeed">
+              <GiWindsock className="windSpeedIcon" />
+              <div className="windSpeedValueAndText">
+                <span className="windSpeedValue">
+                  {cityWeather.wind &&
+                    Math.floor(cityWeather.wind.speed) + "m/s"}
+                </span>
+                <span className="windSpeedText">Wind speed</span>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }
