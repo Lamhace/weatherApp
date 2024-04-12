@@ -39,6 +39,7 @@ input{
 .cityText{
     font-size: 4rem;
     font-weight: 500;
+    color: #023e8a;
 }
 .weatherIcon{
     height: 150px;
@@ -46,6 +47,7 @@ input{
 .temp{
     font-size: 2rem;
     font-weight: 700;
+    color: #03045e;
 }
 .humidityAndSpeedLevel{
     display: flex;
@@ -62,6 +64,7 @@ input{
 .humidityValue, .windSpeedValue{
     font-size: 1.2rem;
     font-weight: 600;
+    color: #03045e;
 }
 .humidityText, .windSpeedText{
     font-size: 0.8rem;
@@ -75,6 +78,7 @@ input{
 .humidityIcon, .windSpeedIcon{
     font-size: 2rem;
     font-weight: 700;
+    color: #0077b6;
 }
 .loadingText, .errorText{
     display: flex;

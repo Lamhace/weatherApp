@@ -34,6 +34,7 @@ function MainPage() {
       setCityName(inputValue);
     }
     // return
+    setInputValue('')
   };
   useEffect(() => {
     const fetchWeatherData = async () => {
