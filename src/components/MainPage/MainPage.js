@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./MainPage.css";
-import './MainPageMedia.css'
+import "./MainPageMedia.css";
 import { FiSearch } from "react-icons/fi";
 import axios from "axios";
 import clearSky from "../../Images/clearSky.png";
@@ -30,7 +30,10 @@ function MainPage() {
     setInputValue(e.target.value);
   };
   const getCity = () => {
-    setCityName(inputValue);
+    if (inputValue) {
+      setCityName(inputValue);
+    }
+    // return
   };
   useEffect(() => {
     const fetchWeatherData = async () => {
@@ -46,7 +49,9 @@ function MainPage() {
       } catch (error) {
         console.log("Error fetching:", error);
         setLoading(false);
-        setErrorMessage("Failed to load data. Check browser connection and try again");
+        setErrorMessage(
+          "Failed to load data. Check browser connection and try again"
+        );
       }
     };
     fetchWeatherData();
@@ -115,7 +120,7 @@ function MainPage() {
     default:
       break;
   }
- 
+
   console.log(cityWeather);
   return (
     <div className="container">
