@@ -51,7 +51,7 @@ function MainPage() {
         console.log("Error fetching:", error);
         setLoading(false);
         setErrorMessage(
-          "Failed to load data. Check browser connection and try again"
+          "Failed to load data."
         );
       }
     };
